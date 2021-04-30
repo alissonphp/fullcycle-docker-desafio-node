@@ -15,5 +15,3 @@ RUN yarn init -y
 RUN yarn add express mysql
 
 EXPOSE 3000
-
-ENTRYPOINT ["dockerize", "-wait tcp://mysql:3306", "node", "index.js"]
