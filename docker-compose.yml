@@ -12,7 +12,7 @@ services:
     api:
         build: 
             context: node-api
-        entrypoint: dockerize -wait tcp://mysql:3306 -timeout 20s docker-entrypoint.sh
+        entrypoint: dockerize -wait tcp://mysql:3306 -timeout 20s node index.js
         environment: 
             - DB_HOST=mysql
             - DB_DATABASE=desafio02
